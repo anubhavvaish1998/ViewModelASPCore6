@@ -1,0 +1,57 @@
+﻿@model ViewModelASPCore6.Models.SchoolViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="container">
+    <h2>Student Data</h2>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>GENDER</th>
+                <th>AGE</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.myStudents)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Gender</td>
+                    <td>@item.Age</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+    <h2>Teacher Data</h2>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>QUALIFICATION</th>
+                <th>SALARY</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.myTeachers)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Qualification</td>
+                    <td>@item.Salary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
